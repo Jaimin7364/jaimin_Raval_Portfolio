@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Trophy, Award, Star, Medal, Target, Users, Code, Zap, Calendar, ExternalLink, Github, Globe } from 'lucide-react';
+import { Trophy, Star, Medal, Target, Users, Code, Zap, Calendar, ExternalLink, Github, Globe } from 'lucide-react';
 
 const Achievements: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -279,7 +279,7 @@ const Achievements: React.FC = () => {
               Ready to Create New Achievements Together?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's collaborate and achieve great things with innovative solutions and cutting-edge technology
+              Let&apos;s collaborate and achieve great things with innovative solutions and cutting-edge technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">

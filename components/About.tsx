@@ -1,8 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Code, Palette, Database, Cloud, Users, Heart, Download, ExternalLink, Award, MapPin, CloudAlertIcon } from 'lucide-react';
-import { pipeline } from 'stream';
-
+import { Code, Palette, Database, Cloud, Users, Heart, Download, ExternalLink, MapPin, CloudAlertIcon } from 'lucide-react';
+import Image from 'next/image';
 const About: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -79,10 +78,10 @@ const About: React.FC = () => {
                     <span className="text-gray-400">Mahesana , Gujarat</span>
                   </div>
                   <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-                    I'm a passionate software engineer with over 2 years+ of experience crafting digital solutions across web, mobile, and cloud. I enjoy turning complex ideas into intuitive, impactful experiences.
+                    I&apos;m a passionate software engineer with over 2 years+ of experience crafting digital solutions across web, mobile, and cloud. I enjoy turning complex ideas into intuitive, impactful experiences.
                   </p>
                   <p className="text-gray-400 mb-8 leading-relaxed">
-                    When I'm not coding, you'll find me exploring new technologies, contributing to 
+                    When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to 
                     open-source projects, or sharing knowledge with the developer community. I believe 
                     in continuous learning and the power of collaboration to build amazing things.
                   </p>
@@ -131,7 +130,7 @@ const About: React.FC = () => {
               </span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {skills.map((skill, index) => {
+              {skills.map((skill) => {
                 const Icon = skill.icon;
                 return (
                   <div key={skill.name} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
@@ -200,7 +199,7 @@ const About: React.FC = () => {
               </span>
             </h2>
             <p className="text-gray-400 mb-12 max-w-3xl mx-auto">
-              When I'm not building amazing digital experiences, I enjoy exploring various interests that keep me inspired and creative.
+              When I&apos;m not building amazing digital experiences, I enjoy exploring various interests that keep me inspired and creative.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {interests.map((interest, index) => (
@@ -217,10 +216,10 @@ const About: React.FC = () => {
         <section className="py-20 px-6 bg-gradient-to-r from-blue-900/30 to-purple-900/30 mt-16">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Let's Create Something Amazing Together
+              Let&apos;s Create Something Amazing Together
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              I'm always excited to work on new projects and collaborate with like-minded individuals
+              I&apos;m always excited to work on new projects and collaborate with like-minded individuals
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href='/contact' className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">

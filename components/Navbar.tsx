@@ -9,8 +9,7 @@ import {
   BookOpen,
   User,
   Mail,
-  Code,
-  Trophy
+  Code
 } from 'lucide-react';
 
 const Navbar = () => {

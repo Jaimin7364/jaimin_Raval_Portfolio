@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.jaiminraval.dev
+
+# Sitemaps
+Sitemap: https://www.jaiminraval.dev/sitemap.xml

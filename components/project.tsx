@@ -137,7 +137,7 @@ export default function ProjectsPage() {
               Have a Project in Mind?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's collaborate and bring your ideas to life with cutting-edge technology
+              Let&apos;s collaborate and bring your ideas to life with cutting-edge technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href='/contact' className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">

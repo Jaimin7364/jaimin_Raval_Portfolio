@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
-
+import Image from 'next/image';
 export interface Article {
   id: string;
   title: string;
