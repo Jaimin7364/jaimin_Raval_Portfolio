@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Jaimin Raval',
-  description: 'Jaimin Raval is a professional Computer Science Engineer, Software Engineer, Developer, App Developer, Cloud Enthusiast, and DevOps Expert. Specializing in building scalable applications, cloud solutions, and modern DevOps practices.',
+  description: 'I am a professional Computer Science Engineer, Software Engineer, Developer, App Developer, Cloud Enthusiast, and DevOps Expert. Specializing in building scalable applications, cloud solutions, and modern DevOps practices.',
   icons: {
     icon: '/assets/logo.png',
   },
