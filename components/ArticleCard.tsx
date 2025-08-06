@@ -76,10 +76,15 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
 
         {/* ✅ Link to blogurl */}
         <Link href={`/article/${article.id}/${article.slug}`}>
-  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
-    Read More
-  </button>
-</Link>
+          <button className="flex items-center text-blue-400 font-medium group-hover:text-purple-400 transition-colors duration-300">
+            <span className="mr-2">Read More</span>
+
+            <ArrowRight
+              size={16}
+              className="group-hover:translate-x-1 transition-transform duration-300"
+            />
+          </button>
+        </Link>
       </div>
     </div>
   );
