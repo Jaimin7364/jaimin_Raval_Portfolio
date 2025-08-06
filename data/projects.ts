@@ -69,7 +69,7 @@ export const projects: Project[] = [
     year: "2025",
     gradient: "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
     githubUrl: "https://github.com/Jaimin7364/wallxpert-backend",
-    liveUrl: "/",
+    liveUrl: "/wallxpert.apk",
     downloadable: true,
     featured: true,
     status: "Live"
