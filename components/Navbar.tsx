@@ -31,9 +31,7 @@ const Navbar = () => {
     // { name : 'Achievements', path: '/achievements', icon: Trophy},
     { name: 'About', path: '/about', icon: User },
     { name: 'Contact', path: '/contact', icon: Mail },
-    { name: 'Projects', path: '/projects', icon: Code }
-    ,
-    // { name: 'Blog', path: '/blogs', icon: BookOpen }
+    { name: 'Projects', path: '/projects', icon: Code },
   ];
 
   const isActive = (path: string) => pathname === path;

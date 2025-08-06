@@ -2,7 +2,9 @@
 import React from 'react';
 import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 export interface Article {
+  // file(arg0: string, arg1: string, arg2: string, file: any): unknown;
   id: string;
   title: string;
   excerpt: string;
@@ -73,16 +75,11 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
         </div>
 
         {/* ✅ Link to blogurl */}
-        <a
-          href={article.blogurl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center text-blue-400 font-medium group-hover:text-purple-400 transition-colors duration-300"
-          onClick={(e) => e.stopPropagation()} // prevent triggering card click
-        >
-          <span className="mr-2">Read More</span>
-          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-        </a>
+        <Link href={`/article/${article.id}/${article.slug}`}>
+  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+    Read More
+  </button>
+</Link>
       </div>
     </div>
   );

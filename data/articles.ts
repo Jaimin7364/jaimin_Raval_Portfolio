@@ -11,7 +11,7 @@ export const articles: Article[] = [
     category: 'Artificial Intelligence',
     imageUrl: 'https://tech.news.am/static/news/b/2025/07/5843.jpg',
     slug: 'gpt5-coming-july-2025',
-    blogurl:'https://medium.com/@jaiminraval100/gpt-5-is-coming-in-july-2025-and-everything-will-change-b7b0c868acd5'
+    blogurl: '/articles/mastering-react-state.md',
   },
   // {
   //   id: '2',
