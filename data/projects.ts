@@ -59,5 +59,19 @@ export const projects: Project[] = [
     downloadable: true,
     featured: true,
     status: "Live"
+  },
+  {
+    id: 4,
+    title: "WallXpert - HD Wallpaper Hub",
+    category: "Mobile App",
+    description: "A cross-platform HD wallpaper application built with Flutter and Node.js. Features a dynamic grid layout, powerful search and category filters, and a seamless admin upload panel. The backend leverages Azure Blob Storage for scalable image hosting and MongoDB for fast data retrieval.",
+    technologies: ["Flutter", "Node.js", "MongoDB", "Express", "Azure Blob Storage","Azure VM"],
+    year: "2025",
+    gradient: "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    githubUrl: "https://github.com/Jaimin7364/wallxpert-backend",
+    liveUrl: "/wallxpert.apk",
+    downloadable: true,
+    featured: true,
+    status: "Live"
   }
 ];
