@@ -121,7 +121,7 @@ export default function Homepage() {
               <div className="flex justify-center gap-6 mb-16">
                 {[
                   { icon: Github, href: 'https://github.com/Jaimin7364', label: 'GitHub' },
-                  { icon: Linkedin, href: 'https://www.linkedin.com/in/jaimin-raval-132751283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', label: 'LinkedIn' },
+                  { icon: Linkedin, href: 'www.linkedin.com/in/jaimin-raval-132751283', label: 'LinkedIn' },
                   { icon: Twitter, href: 'https://x.com/JaiminRaval100?t=ZVjx3H-CihfeafrtLlg0ZA&s=09', label: 'Twitter' },
                   { icon: Mail, href: 'mailto:contact@jaiminraval.dev', label: 'Email' }
                 ].map(({ icon: Icon, href, label }) => (
