@@ -73,5 +73,47 @@ export const projects: Project[] = [
     downloadable: true,
     featured: true,
     status: "Live"
-  }
+  },
+  {
+  id: 5,
+  title: "Trexo - Property & Vehicle Marketplace",
+  category: "Mobile App",
+  description: "Trexo is a cross-platform marketplace application built with Flutter and Node.js. It allows users to browse, list, and manage both real estate properties and vehicles with ease. The app features advanced search, smart filters, detailed listings with images, secure authentication, and smooth user experience. The backend is hosted on DigitalOcean, using AWS S3 for scalable image storage and MongoDB for fast, reliable data management.",
+  technologies: ["Flutter", "Node.js", "Express", "MongoDB", "DigitalOcean", "AWS S3", "Azure DevOps"],
+  year: "2025",
+  gradient: "linear-gradient(135deg, #0f2027 0%, #2c5364 50%, #203a43 100%)",
+  githubUrl: "https://github.com/Jaimin7364/trexo-backend",
+  liveUrl: "/trexo.apk",
+  downloadable: true,
+  featured: true,
+  status: "Live"
+ },
+ {
+  id: 6,
+  title: "SMEGo - Smart Business Management Platform",
+  category: "Full Stack",
+  description: "SMEGo is a powerful web-based platform designed for small and medium enterprises (SMEs). It provides tools for sales tracking, customer management, and inventory control, enabling businesses to streamline operations and grow efficiently. The frontend is built with Next.js and TypeScript for a fast, scalable user experience, while the backend uses Node.js, Express, and MongoDB for secure and reliable data management.",
+  technologies: ["Next.js", "TypeScript", "Node.js", "Express.js", "MongoDB"],
+  year: "2025",
+  gradient: "linear-gradient(135deg, #283c86 0%, #45a247 100%)",
+  githubUrl: "https://github.com/Jaimin7364/SMEGo_backend",
+  liveUrl: "https://github.com/Jaimin7364/SMEGo_frontend",
+  downloadable: false,
+  featured: true,
+  status: "Development"
+ }, 
+ {
+  id: 7,
+  title: "LLM Integration with Groq & AWS Bedrock",
+  category: "AI/ML",
+  description: "An advanced project showcasing integration of Large Language Models (LLMs) using Groq and AWS Bedrock. The system demonstrates prompt engineering, model fine-tuning, and real-time inference for various NLP tasks. It highlights scalable deployment with Bedrock, high-speed inference with Groq, and practical use cases like text generation, summarization, and conversational AI.",
+  technologies: ["Groq", "AWS Bedrock", "Python", "API Integration"],
+  year: "2025",
+  gradient: "linear-gradient(135deg, #141e30 0%, #243b55 100%)",
+  githubUrl: "https://github.com/Jaimin7364/check-C-test",
+  liveUrl: "",
+  downloadable: false,
+  featured: true,
+  status: "Live"
+ }
 ];
