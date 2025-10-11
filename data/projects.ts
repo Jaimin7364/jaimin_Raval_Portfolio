@@ -130,5 +130,4 @@ export const projects: Project[] = [
   featured: true,
   status: "Live"
  }
-
 ];
