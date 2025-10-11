@@ -115,5 +115,20 @@ export const projects: Project[] = [
   downloadable: false,
   featured: true,
   status: "Live"
+ },
+ {
+  id: 8,
+  title: "Invoiz - Smart Invoice Management System",
+  category: "Full Stack",
+  description: "Invoiz is an intelligent invoicing and billing management system designed for freelancers, startups, and small businesses. It simplifies invoice creation, payment tracking, and client management with an intuitive user interface. The frontend is developed using React.js and Tailwind CSS for a modern and responsive design, while the backend is powered by Node.js, Express, and MongoDB, ensuring seamless data handling and performance.",
+  technologies: ["Flutter", "Azure", "Node.js", "Express.js", "MongoDB"],
+  year: "2025",
+  gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
+  githubUrl: "/",
+  liveUrl: "/invoiz.apk",
+  downloadable: true,
+  featured: true,
+  status: "Live"
  }
+
 ];
