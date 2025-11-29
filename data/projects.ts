@@ -125,7 +125,7 @@ export const projects: Project[] = [
   year: "2025",
   gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
   githubUrl: "/",
-  liveUrl: "/invoiz.apk",
+  liveUrl: "/Invoiz_Updated.apk",
   downloadable: true,
   featured: true,
   status: "Live"
