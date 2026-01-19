@@ -129,5 +129,19 @@ export const projects: Project[] = [
   downloadable: true,
   featured: true,
   status: "Live"
- }
+ },
+ {
+  id: 9,
+  title: "FileSetu - Smart Document Manager for Insurance Agents",
+  category: "Mobile App",
+  description: "FileSetu revolutionizes document management for insurance agents with secure cloud storage, Firebase OTP authentication, and instant sharing capabilities. Built with Flutter and powered by MongoDB Atlas & AWS S3, it offers seamless client document organization with enterprise-grade security. Features include real-time search, gallery integration, pinch-to-zoom image viewer, and WhatsApp sharing - all at just ₹100/month.",
+  technologies: ["Flutter", "Firebase", "MongoDB", "AWS S3"],
+  year: "2026",
+  gradient: "linear-gradient(135deg, #1976D2 0%, #42A5F5 100%)",
+  githubUrl: "/",
+  liveUrl: "/FileSetu.apk",
+  downloadable: true,
+  featured: true,
+  status: "Live"
+}
 ];
