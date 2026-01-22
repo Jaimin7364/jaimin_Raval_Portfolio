@@ -143,5 +143,19 @@ export const projects: Project[] = [
   downloadable: true,
   featured: true,
   status: "Live"
+},
+{
+  id: 10,
+  title: "ShriDev Spices - Invoice & Inventory Management System",
+  category: "Mobile App",
+  description: "ShriDev Spices is a comprehensive business management solution for spice traders and retailers. Features include multi-user authentication, real-time inventory tracking with automatic stock deduction, customer management with payment tracking, and professional PDF invoice generation. Built with Flutter and MongoDB, it offers per-user data isolation, analytics dashboard, low-stock alerts, and customizable company settings. Perfect for small to medium businesses needing reliable offline-capable invoice and inventory management.",
+  technologies: ["Flutter", "MongoDB Atlas", "PDF Generation", "Provider State Management"],
+  year: "2026",
+  gradient: "linear-gradient(135deg, #FF6F00 0%, #FF9800 100%)",
+  githubUrl: "/",
+  liveUrl: "/shridev.apk",
+  downloadable: true,
+  featured: true,
+  status: "Live"
 }
 ];
