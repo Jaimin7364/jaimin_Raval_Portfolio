@@ -22,20 +22,7 @@ const articles = [
     imageUrl: 'https://i.ytimg.com/vi/P_ecIGu3xn0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDcVWJs5a-Yl93vQJeOb9LWdc2d1g',
     slug: 'mastering-aws-bedrock',
     blogurl: '/articles/aws-bedrock-service.md'
-  },
-
-  {
-    id: 'undefined',
-    title: 'undefined',
-    excerpt: 'undefined',
-    author: 'Jaimin Raval',
-    publishDate: 'undefined',
-    readTime: 'undefined',
-    category: 'undefined',
-    imageUrl: 'undefined',
-    slug: 'undefined',
-    blogurl: 'undefined'
-  },
+  }
 
 ];
 
