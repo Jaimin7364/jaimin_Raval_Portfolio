@@ -1,59 +1,41 @@
-const articles = [
-  {
-    id: '1',
-    title: 'GPT-5 Is Coming in July 2025 - And Everything Will Change',
-    excerpt: 'Discover how GPT-5 will revolutionize the way we work, create, and connect in a hybrid world. From smarter workflows to deeper personalization, everything is about to change.',
-    author: 'Jaimin Raval',
-    publishDate: 'July 26, 2025',
-    readTime: '15 min read',
-    category: 'Artificial Intelligence',
-    imageUrl: 'https://tech.news.am/static/news/b/2025/07/5843.jpg',
-    slug: 'gpt5-coming-july-2025',
-    blogurl: '/articles/mastering-react-state.md',
-  },
-  {
-    id: '2',
-    title: 'Mastering AWS Bedrock: The Future of Generative AI Infrastructure',
-    excerpt: 'Dive into AWS Bedrock — a serverless, fully-managed service that brings powerful foundation models from top AI providers directly to your applications without needing ML infrastructure management.',
-    author: 'Jaimin Raval',
-    publishDate: 'August 6, 2025',
-    readTime: '15 min read',
-    category: 'Cloud Computing',
-    imageUrl: 'https://i.ytimg.com/vi/P_ecIGu3xn0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDcVWJs5a-Yl93vQJeOb9LWdc2d1g',
-    slug: 'mastering-aws-bedrock',
-    blogurl: '/articles/aws-bedrock-service.md'
-  }
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
-];
+const articlesDirectory = path.join(process.cwd(), "public/articles");
 
-const categories = [
-  'All',
-  'React',
-  'JavaScript',
-  'TypeScript',
-  'CSS',
-  'Backend',
-  'Performance',
-  'DevOps',
-  'Accessibility',
-  'Artificial Intelligence',
-  'Cloud Computing'
-];
+export function getAllArticles() {
+  const fileNames = fs.readdirSync(articlesDirectory);
 
-const getArticlesByCategory = (category) => {
-  if (category === 'All') {
-    return articles;
-  }
-  return articles.filter(article => article.category === category);
-};
+  return fileNames.map((fileName, index) => {
+    const slugFromFile = fileName.replace(/\.md$/, "");
+    const fullPath = path.join(articlesDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
 
-const getArticleBySlug = (slug) => {
-  return articles.find(article => article.slug === slug);
-};
+    const { data } = matter(fileContents);
 
-module.exports = {
-  articles,
-  categories,
-  getArticlesByCategory,
-  getArticleBySlug
-};
+    return {
+      id: data.id ?? index.toString(),
+      title: data.title,
+      excerpt: data.excerpt,
+      author: data.author,
+      publishDate: data.publishDate,
+      readTime: data.readTime,
+      category: data.category,
+      imageUrl: data.imageUrl,
+      slug: data.slug ?? slugFromFile,
+      blogurl: `/articles/${data.slug ?? slugFromFile}`,
+    };
+  });
+}
+
+export function getArticleBySlug(slug) {
+  return getAllArticles().find(article => article.slug === slug);
+}
+
+export function getCategories() {
+  return [
+    "All",
+    ...new Set(getAllArticles().map(article => article.category)),
+  ];
+}

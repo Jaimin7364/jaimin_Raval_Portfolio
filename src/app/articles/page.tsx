@@ -2,6 +2,7 @@
 
 import Articles from "../../../components/Articles";
 import Navbar from "../../../components/Navbar";
+import { getAllArticles, getCategories } from "../../../data/articles";
 
 
 export const metadata = {
@@ -13,10 +14,13 @@ export const metadata = {
 };
 
 export default function ArticlesPage() {
+    const articles = getAllArticles();
+    const categories = getCategories();
+    
     return (
         <>
         < Navbar />
-        <Articles />
+        <Articles articles={articles} categories={categories} />
         </>
     );
 }

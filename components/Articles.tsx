@@ -2,9 +2,13 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Search, Filter, BookOpen, ExternalLink, Mail } from 'lucide-react';
 import ArticleCard, { Article } from './ArticleCard';
-import { articles, categories, getArticlesByCategory } from '../data/articles';
 
-const Articles: React.FC = () => {
+interface ArticlesProps {
+  articles: Article[];
+  categories: string[];
+}
+
+const Articles: React.FC<ArticlesProps> = ({ articles, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [isVisible, setIsVisible] = useState(false);
@@ -15,7 +19,9 @@ const Articles: React.FC = () => {
 
   // Filter articles based on category and search term
   const filteredArticles = useMemo(() => {
-    let filtered = getArticlesByCategory(selectedCategory);
+    let filtered = selectedCategory === 'All' 
+      ? articles 
+      : articles.filter(article => article.category === selectedCategory);
     
     if (searchTerm) {
       filtered = filtered.filter(article =>

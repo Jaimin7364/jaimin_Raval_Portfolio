@@ -5,7 +5,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
-import { articles } from '../data/articles';
+import { getAllArticles } from '../data/articles';
 import ArticleClient from './ArticleClient';
 
 // This component receives simple strings as props
@@ -17,6 +17,7 @@ interface ArticleDetailProps {
 // This is an async Server Component, so it can read files
 export default async function ArticleDetail({ id, slug }: ArticleDetailProps) {
   // Find the article using the props
+  const articles = getAllArticles();
   const article = articles.find((a) => a.id === id && a.slug === slug);
 
   // If no article is found, render the 404 page
@@ -25,7 +26,7 @@ export default async function ArticleDetail({ id, slug }: ArticleDetailProps) {
   }
 
   // Define the path to the markdown file in your /public folder
-  const filePath = path.join(process.cwd(), 'public', article.blogurl);
+  const filePath = path.join(process.cwd(), 'public', 'articles', `${slug}.md`);
   let contentHtml = '';
 
   // Read and process the markdown file
