@@ -26,7 +26,21 @@
 //     blogurl: '/articles/aws-bedrock-service.md'
 //   },
  
-// ];
+// 
+  {
+    id: 'undefined',
+    title: 'undefined',
+    excerpt: 'undefined',
+    author: 'Jaimin Raval',
+    publishDate: 'undefined',
+    readTime: 'undefined',
+    category: 'undefined',
+    imageUrl: 'undefined',
+    slug: 'undefined',
+    blogurl: 'undefined'
+  },
+
+];
 
 // export const categories = [
 //   'All',
