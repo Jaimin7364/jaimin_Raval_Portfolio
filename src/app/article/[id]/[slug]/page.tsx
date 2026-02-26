@@ -1,8 +1,18 @@
 // app/article/[id]/[slug]/page.tsx
 import { Metadata } from 'next';
-import { getArticleBySlug } from '../../../../../data/articles';
+import { getArticleBySlug, getAllArticles } from '../../../../../data/articles';
 import Navbar from '../../../../../components/Navbar';
 import ArticleDetail from '../../../../../components/article_detail';
+
+// Generate static params for all articles
+export async function generateStaticParams() {
+  const articles = getAllArticles();
+  
+  return articles.map((article) => ({
+    id: article.id.toString(),
+    slug: article.slug,
+  }));
+}
 
 // Generate dynamic metadata for SEO
 export async function generateMetadata({ params }: { params: Promise<{ id: string; slug: string }> }): Promise<Metadata> {
@@ -11,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
   if (!article) {
     return {
-      title: 'Not Found | Jaimin Raval',
+      title: 'Not Found',
       description: 'The requested article could not be found.',
       robots: {
         index: false,
@@ -21,8 +31,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   }
 
   return {
-    title: `${article.title} | Jaimin Raval`,
+    title: article.title,
     description: article.excerpt,
+    alternates: {
+      canonical: `https://www.jaiminraval.dev/article/${article.id}/${article.slug}`,
+    },
+    keywords: [article.category, 'web development', 'programming', 'technology', article.author],
+    authors: [{ name: article.author }],
     openGraph: {
       title: article.title,
       description: article.excerpt,
@@ -31,16 +46,26 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       type: 'article',
       publishedTime: new Date(article.publishDate).toISOString(),
       authors: [article.author],
+      siteName: 'Jaimin Raval Portfolio',
+      locale: 'en_US',
     },
     twitter: {
       card: 'summary_large_image',
       title: article.title,
       description: article.excerpt,
       images: [article.imageUrl],
+      creator: '@JaiminRaval100',
     },
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
 }
@@ -65,7 +90,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
   return (
     <>
       <Navbar />
-      {/* Structured data for search engines */}
+      {/* Article structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -75,15 +100,55 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
             "headline": article.title,
             "author": {
               "@type": "Person",
-              "name": article.author
+              "name": article.author,
+              "url": "https://www.jaiminraval.dev"
             },
             "datePublished": new Date(article.publishDate).toISOString(),
+            "dateModified": new Date(article.publishDate).toISOString(),
             "image": article.imageUrl,
             "description": article.excerpt,
+            "publisher": {
+              "@type": "Person",
+              "name": "Jaimin Raval",
+              "url": "https://www.jaiminraval.dev"
+            },
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": `https://www.jaiminraval.dev/article/${id}/${slug}`
-            }
+            },
+            "articleSection": article.category,
+            "keywords": article.category,
+            "inLanguage": "en-US"
+          })
+        }}
+      />
+      {/* BreadcrumbList structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.jaiminraval.dev"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Articles",
+                "item": "https://www.jaiminraval.dev/articles"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": article.title,
+                "item": `https://www.jaiminraval.dev/article/${id}/${slug}`
+              }
+            ]
           })
         }}
       />

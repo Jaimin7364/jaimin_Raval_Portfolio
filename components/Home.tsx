@@ -108,7 +108,7 @@ export default function Homepage() {
                 </a>
                 
                 <a
-                  href="/resume/Jaimin Resume.pdf"
+                  href="/resume/JaiminResume.pdf"
                   download
                   className="px-8 py-4 border-2 border-gray-600 rounded-full font-semibold text-lg hover:border-blue-400 hover:text-blue-400 transition-all duration-300 flex items-center gap-2"
                 >

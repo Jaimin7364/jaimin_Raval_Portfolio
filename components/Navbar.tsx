@@ -9,7 +9,8 @@ import {
   BookOpen,
   User,
   Mail,
-  Code
+  Code,
+  Trophy
 } from 'lucide-react';
 
 const Navbar = () => {
@@ -28,7 +29,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', path: '/', icon: Home },
     { name: 'Articles', path: '/articles', icon: BookOpen },
-    // { name : 'Achievements', path: '/achievements', icon: Trophy},
+    { name: 'Achievements', path: '/achievements', icon: Trophy },
     { name: 'About', path: '/about', icon: User },
     { name: 'Contact', path: '/contact', icon: Mail },
     { name: 'Projects', path: '/projects', icon: Code },

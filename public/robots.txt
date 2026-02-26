@@ -2,8 +2,14 @@
 User-agent: *
 Allow: /
 
+# *
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+
 # Host
 Host: https://www.jaiminraval.dev
 
 # Sitemaps
 Sitemap: https://www.jaiminraval.dev/sitemap.xml
+Sitemap: https://www.jaiminraval.dev/sitemap-0.xml

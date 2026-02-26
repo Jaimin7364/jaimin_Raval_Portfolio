@@ -87,7 +87,7 @@ const About: React.FC = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
-                  href="/resume/Jaimin Resume.pdf"
+                  href="/resume/JaiminResume.pdf"
                   download className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">
                       <span className="flex items-center gap-2">
                         Download Resume
