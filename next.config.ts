@@ -34,6 +34,48 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // Headers for APK downloads
+      {
+        source: '/:file*.apk',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/vnd.android.package-archive'
+          },
+          {
+            key: 'Content-Disposition',
+            value: 'attachment; filename=":file.apk"'
+          },
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow'
+          },
+        ],
+      },
+    ];
+  },
+  
+  // Redirects for canonical URLs
+  async redirects() {
+    return [
+      // Redirect non-www to www
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'jaiminraval.dev',
+          },
+        ],
+        destination: 'https://www.jaiminraval.dev/:path*',
+        permanent: true,
+      },
+      // Redirect old blog URLs to articles page or new structure
+      {
+        source: '/blog/:path*',
+        destination: '/articles',
+        permanent: true,
+      },
     ];
   },
 };

@@ -8,7 +8,7 @@ module.exports = {
   sitemapSize: 5000,
   changefreq: 'daily',
   priority: 0.7,
-  exclude: ['/api/*', '/_next/*'],
+  exclude: ['/api/*', '/_next/*', '/*.apk'],
   robotsTxtOptions: {
     policies: [
       {
@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         userAgent: '*',
-        disallow: ['/api/', '/_next/'],
+        disallow: ['/api/', '/_next/', '/*.apk'],
       },
     ],
     additionalSitemaps: [

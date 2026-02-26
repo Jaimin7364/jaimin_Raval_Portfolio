@@ -6,6 +6,7 @@ Allow: /
 User-agent: *
 Disallow: /api/
 Disallow: /_next/
+Disallow: /*.apk
 
 # Host
 Host: https://www.jaiminraval.dev
