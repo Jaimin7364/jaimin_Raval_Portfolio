@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: 'Projects',
   description: 'Explore Jaimin Raval\'s portfolio projects, showcasing expertise in modern web development, cloud solutions, innovative applications, and cutting-edge technology implementations.',
   alternates: {
-    canonical: 'https://www.jaiminraval.dev/projects'
+    canonical: 'https://www.jaiminraval.in/projects'
   },
   openGraph: {
     title: 'Projects | Jaimin Raval Portfolio',
     description: 'Explore Jaimin Raval\'s portfolio projects showcasing expertise in modern web development and cloud solutions.',
-    url: 'https://www.jaiminraval.dev/projects',
+    url: 'https://www.jaiminraval.in/projects',
     siteName: 'Jaimin Raval Portfolio',
     images: ['/assets/logo.png'],
     locale: 'en_US',

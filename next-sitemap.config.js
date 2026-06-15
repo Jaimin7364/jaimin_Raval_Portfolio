@@ -3,7 +3,7 @@ const { getAllArticles } = require('./data/articles.js');
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://www.jaiminraval.dev',
+  siteUrl: 'https://www.jaiminraval.in',
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: 'daily',
@@ -21,7 +21,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://www.jaiminraval.dev/sitemap-0.xml',
+      'https://www.jaiminraval.in/sitemap-0.xml',
     ],
   },
   transform: async (config, path) => {

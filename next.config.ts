@@ -64,10 +64,10 @@ const nextConfig: NextConfig = {
         has: [
           {
             type: 'host',
-            value: 'jaiminraval.dev',
+            value: 'jaiminraval.in',
           },
         ],
-        destination: 'https://www.jaiminraval.dev/:path*',
+        destination: 'https://www.jaiminraval.in/:path*',
         permanent: true,
       },
       // Redirect old blog URLs to articles page or new structure

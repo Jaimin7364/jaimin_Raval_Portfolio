@@ -34,14 +34,14 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     title: article.title,
     description: article.excerpt,
     alternates: {
-      canonical: `https://www.jaiminraval.dev/article/${article.id}/${article.slug}`,
+      canonical: `https://www.jaiminraval.in/article/${article.id}/${article.slug}`,
     },
     keywords: [article.category, 'web development', 'programming', 'technology', article.author],
     authors: [{ name: article.author }],
     openGraph: {
       title: article.title,
       description: article.excerpt,
-      url: `https://www.jaiminraval.dev/article/${article.id}/${article.slug}`,
+      url: `https://www.jaiminraval.in/article/${article.id}/${article.slug}`,
       images: [article.imageUrl],
       type: 'article',
       publishedTime: new Date(article.publishDate).toISOString(),
@@ -101,7 +101,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
             "author": {
               "@type": "Person",
               "name": article.author,
-              "url": "https://www.jaiminraval.dev"
+              "url": "https://www.jaiminraval.in"
             },
             "datePublished": new Date(article.publishDate).toISOString(),
             "dateModified": new Date(article.publishDate).toISOString(),
@@ -110,11 +110,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
             "publisher": {
               "@type": "Person",
               "name": "Jaimin Raval",
-              "url": "https://www.jaiminraval.dev"
+              "url": "https://www.jaiminraval.in"
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://www.jaiminraval.dev/article/${id}/${slug}`
+              "@id": `https://www.jaiminraval.in/article/${id}/${slug}`
             },
             "articleSection": article.category,
             "keywords": article.category,
@@ -134,19 +134,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.jaiminraval.dev"
+                "item": "https://www.jaiminraval.in"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Articles",
-                "item": "https://www.jaiminraval.dev/articles"
+                "item": "https://www.jaiminraval.in/articles"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": article.title,
-                "item": `https://www.jaiminraval.dev/article/${id}/${slug}`
+                "item": `https://www.jaiminraval.in/article/${id}/${slug}`
               }
             ]
           })

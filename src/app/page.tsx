@@ -2,15 +2,15 @@ import Homepage from "../../components/Home";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Jaimin Raval',
   description: 'Welcome to the portfolio of Jaimin Raval – Software Engineer, Full Stack Developer, and tech enthusiast specializing in scalable applications and cloud solutions.',
   alternates: {
-    canonical: 'https://www.jaiminraval.dev/',
+    canonical: 'https://www.jaiminraval.in/',
   },
   openGraph: {
     title: 'Jaimin Raval | Software Engineer & Full Stack Developer',
     description: 'Welcome to the portfolio of Jaimin Raval – Software Engineer, Full Stack Developer, and tech enthusiast.',
-    url: 'https://www.jaiminraval.dev/',
+    url: 'https://www.jaiminraval.in/',
     siteName: 'Jaimin Raval Portfolio',
     images: [{
       url: '/assets/logo.png',

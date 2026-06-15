@@ -1,13 +1,16 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
 Allow: /
+
+# *
+User-agent: *
 Disallow: /api/
 Disallow: /_next/
-Disallow: /*.apk$
+Disallow: /*.apk
 
 # Host
-Host: https://www.jaiminraval.dev
+Host: https://www.jaiminraval.in
 
 # Sitemaps
-Sitemap: https://www.jaiminraval.dev/sitemap.xml
-Sitemap: https://www.jaiminraval.dev/sitemap-0.xml
+Sitemap: https://www.jaiminraval.in/sitemap.xml
+Sitemap: https://www.jaiminraval.in/sitemap-0.xml

@@ -7,7 +7,7 @@ import ClientProviders from '../../components/ClientProviders'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.jaiminraval.dev'),
+  metadataBase: new URL('https://www.jaiminraval.in'),
   title: {
     default: 'Jaimin Raval | Software Engineer & Full Stack Developer',
     template: '%s | Jaimin Raval'
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.jaiminraval.dev',
+    url: 'https://www.jaiminraval.in',
     siteName: 'Jaimin Raval Portfolio',
     title: 'Jaimin Raval | Software Engineer & Full Stack Developer',
     description: 'Professional Computer Science Engineer specializing in scalable applications, cloud solutions, and modern DevOps practices.',
@@ -74,8 +74,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Jaimin Raval",
-    "url": "https://www.jaiminraval.dev",
-    "image": "https://www.jaiminraval.dev/assets/logo.png",
+    "url": "https://www.jaiminraval.in",
+    "image": "https://www.jaiminraval.in/assets/logo.png",
     "jobTitle": "Software Engineer",
     "description": "Professional Computer Science Engineer, Software Engineer, Developer, App Developer, Cloud Enthusiast, and DevOps Expert",
     "sameAs": [
@@ -94,7 +94,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Jaimin Raval Portfolio",
-    "url": "https://www.jaiminraval.dev",
+    "url": "https://www.jaiminraval.in",
     "description": "Professional portfolio showcasing software engineering projects, articles, and expertise in web development, cloud computing, and DevOps.",
     "author": {
       "@type": "Person",
