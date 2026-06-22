@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: 'Jaimin Raval | Software Engineer & Full Stack Developer',
     description: 'Professional Computer Science Engineer specializing in scalable applications, cloud solutions, and modern DevOps practices.',
     images: [{
-      url: '/assets/logo.png',
+      url: 'https://www.jaiminraval.in/assets/logo.png',
       width: 1200,
       height: 630,
       alt: 'Jaimin Raval - Software Engineer',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: 'Jaimin Raval | Software Engineer & Full Stack Developer',
     description: 'Professional Computer Science Engineer specializing in scalable applications, cloud solutions, and modern DevOps practices.',
     creator: '@JaiminRaval100',
-    images: ['/assets/logo.png'],
+    images: ['https://www.jaiminraval.in/assets/logo.png'],
   },
   robots: {
     index: true,
@@ -56,8 +56,13 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/assets/logo.png',
-    apple: '/assets/logo.png',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/assets/logo.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/assets/logo.png', type: 'image/png' },
+    ],
   },
   verification: {
     // Add your Google Search Console verification here

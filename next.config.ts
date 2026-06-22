@@ -34,6 +34,30 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // Headers for images to ensure they're indexed
+      {
+        source: '/assets/:path*.{png,jpg,jpeg,gif,webp}',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          },
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow'
+          },
+        ],
+      },
+      // Headers for favicon
+      {
+        source: '/favicon.ico',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400'
+          },
+        ],
+      },
       // Headers for APK downloads
       {
         source: '/:file*.apk',
