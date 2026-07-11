@@ -1,22 +1,12 @@
+# *
 User-agent: *
 Allow: /
-Allow: /assets/
-Allow: /public/
 
-# Disallow crawling of internal paths
+# *
+User-agent: *
 Disallow: /api/
 Disallow: /_next/
 Disallow: /*.apk
-
-# Allow image indexing
-User-agent: Googlebot-Image
-Allow: /assets/
-Allow: /public/
-
-# Image crawling for other search engines
-User-agent: Bingbot
-Allow: /assets/
-Allow: /public/
 
 # Host
 Host: https://www.jaiminraval.in
